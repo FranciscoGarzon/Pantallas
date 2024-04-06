@@ -1,15 +1,18 @@
 package com.example.pantallas
 
-import androidx.appcompat.app.AppCompatActivity
+import android.annotation.SuppressLint
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_display_message.*
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 
-class DisplayMessageActivity : AppCompatActivity() {
+class MainActivity2 : AppCompatActivity() {
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_display_message)
+        setContentView(R.layout.activity_main2)
 
-        val message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE)
-        displayTextView.text = message
+        val textView = findViewById<TextView>(R.id.text_View)
+        val value = intent.getStringExtra("key")
+        textView.text = value
     }
 }

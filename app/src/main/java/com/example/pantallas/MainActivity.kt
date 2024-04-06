@@ -1,25 +1,25 @@
 package com.example.pantallas
 
+import android.annotation.SuppressLint
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_main.*
+import android.widget.Button
+import android.widget.EditText
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val editText = findViewById<EditText>(R.id.texto_principal)
+        val button = findViewById<Button>(R.id.bo_enviar)
+
         button.setOnClickListener {
-            val message = editText.text.toString()
-            val intent = Intent(this, DisplayMessageActivity::class.java).apply {
-                putExtra(EXTRA_MESSAGE, message)
-            }
+            val intent = Intent(this, MainActivity2::class.java)
+            intent.putExtra("key", editText.text.toString())
             startActivity(intent)
         }
-    }
-
-    companion object {
-        const val EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE"
     }
 }
