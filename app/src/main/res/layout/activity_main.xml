@@ -9,21 +9,20 @@
 
     <EditText
         android:id="@+id/texto_principal"
-        android:layout_width="352dp"
-        android:layout_height="125dp"
+        android:layout_width="371dp"
+        android:layout_height="77dp"
         android:ems="10"
         android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.728"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.45" />
+        app:layout_constraintVertical_bias="0.278" />
 
     <Button
         android:id="@+id/bo_enviar"
-        android:layout_width="500px"
-        android:layout_height="wrap_content"
+        android:layout_width="212dp"
+        android:layout_height="54dp"
         android:backgroundTint="#3F51B5"
         android:text="Enviar texto"
         android:textSize="14sp"
